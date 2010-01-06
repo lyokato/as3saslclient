@@ -16,7 +16,7 @@ package org.coderepos.sasl
             password:String="", authzid:String="")
         {
             var config:SASLConfig = new SASLConfig(authcid, password, authzid);
-            supportMechanism(new PLAINTEXT(config));
+            supportMechanism(new PLAIN(config));
             supportMechanism(new LOGIN(config));
             supportMechanism(new ANONYMOUS(config));
             supportMechanism(new EXTERNAL(config));
