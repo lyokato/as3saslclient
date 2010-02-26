@@ -36,5 +36,5 @@
     <language>EN</language>
     <title>AS3 SASL Client Library</title>
   </metadata>
-  <output>bin/as3saslcient-1_0_1.swc</output>
+  <output>bin/as3saslcient-1_0_2.swc</output>
 </flex-config>

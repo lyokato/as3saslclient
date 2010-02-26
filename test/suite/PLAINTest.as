@@ -28,7 +28,8 @@ package suite
             var mech:ISASLMechanism = new PLAIN(config);
             assertEquals("mech name", "PLAIN", mech.name);
             var start:String = mech.start();
-            assertEquals("SASL PLAIN start", "myauthzid\0myauthcid\0mypass", start);
+            var nullChar:String = String.fromCharCode(0);
+            assertEquals("SASL PLAIN start", "myauthzid" + nullChar + "myauthcid" + nullChar + "mypass", start);
             var step:String = mech.step("dummy challenge");
             assertNull(step);
         }

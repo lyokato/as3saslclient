@@ -24,8 +24,8 @@ package org.coderepos.sasl.mechanisms
                 ? _config.password : "";
             var authzid:String = (_config.authzid != null)
                 ? _config.authzid : "";
-
-            return authzid + "\0" + authcid + "\0" + password;
+            var nullChar:String = String.fromCharCode(0);
+            return authzid + nullChar + authcid + nullChar + password;
         }
 
         public function step(challenge:String):String
