@@ -1,4 +1,4 @@
-package org.coderepos.sasl
+package org.coderepos.sasl.exceptions
 {
     public class SASLBadChallengeError extends Error
     {
