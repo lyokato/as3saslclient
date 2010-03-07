@@ -17,7 +17,7 @@ package org.coderepos.sasl
     import org.coderepos.sasl.mechanisms.ANONYMOUS;
     import org.coderepos.sasl.mechanisms.EXTERNAL;
     import org.coderepos.sasl.mechanisms.CRAM_MD5;
-    //import org.coderepos.sasl.mechanisms.DIGEST_MD5;
+    import org.coderepos.sasl.mechanisms.DIGEST_MD5;
     //import org.coderepos.sasl.mechanisms.GSSAPI;
 
     public class SASLMechanismDefaultFactory extends SASLMechanismFactory
@@ -25,15 +25,15 @@ package org.coderepos.sasl
         private var _config:SASLConfig;
 
         public function SASLMechanismDefaultFactory(authcid:String, 
-            password:String="", authzid:String="")
+            password:String="", authzid:String="", service:String=null, host:String=null)
         {
-            var config:SASLConfig = new SASLConfig(authcid, password, authzid);
+            var config:SASLConfig = new SASLConfig(authcid, password, authzid, service, host);
             supportMechanism(new PLAIN(config));
             supportMechanism(new LOGIN(config));
             supportMechanism(new ANONYMOUS(config));
             supportMechanism(new EXTERNAL(config));
             supportMechanism(new CRAM_MD5(config));
-            //supportMechanism(new DIGEST_MD5());
+            supportMechanism(new DIGEST_MD5(config));
             //supportMechanism(new EXTERNAL());
         }
     }

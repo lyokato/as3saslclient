@@ -13,6 +13,7 @@ package suite {
       addTest(LOGINTest.suite());
       addTest(EXTERNALTest.suite());
       addTest(CRAM_MD5Test.suite());
+      addTest(DIGEST_MD5Test.suite());
       addTest(FactoryTest.suite());
     }
     

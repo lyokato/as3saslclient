@@ -17,12 +17,16 @@ package org.coderepos.sasl
         private var _user:String;
         private var _pass:String;
         private var _authzid:String;
+        private var _service:String;
+        private var _host:String;
 
-        public function SASLConfig(user:String="", pass:String="", auth:String=null)
+        public function SASLConfig(user:String="", pass:String="", auth:String=null, service:String=null, host:String=null)
         {
             _user    = user;
             _pass    = pass;
             _authzid = auth;
+            _service = service;
+            _host    = host;
         }
 
         public function get username():String
@@ -44,6 +48,16 @@ package org.coderepos.sasl
         public function get authzid():String
         {
             return _authzid;
+        }
+
+        public function get service():String
+        {
+            return (_service != null) ? _service : "";
+        }
+
+        public function get host():String
+        {
+            return (_host != null) ? _host : "";
         }
     }
 }

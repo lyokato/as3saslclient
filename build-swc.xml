@@ -28,6 +28,7 @@
       <class>org.coderepos.sasl.mechanisms.ANONYMOUS</class>
       <class>org.coderepos.sasl.mechanisms.EXTERNAL</class>
       <class>org.coderepos.sasl.mechanisms.CRAM_MD5</class>
+      <class>org.coderepos.sasl.mechanisms.DIGEST_MD5</class>
       <class>org.coderepos.sasl.exceptions.SASLBadChallengeError</class>
   </include-classes>
   <metadata>
@@ -36,5 +37,5 @@
     <language>EN</language>
     <title>AS3 SASL Client Library</title>
   </metadata>
-  <output>bin/as3saslcient-1_0_2.swc</output>
+  <output>bin/as3saslcient-1_0_3.swc</output>
 </flex-config>
