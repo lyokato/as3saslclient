@@ -72,7 +72,9 @@ package org.coderepos.sasl.mechanisms
                 res['nonce']      = req['nonce'];
                 res['cnonce']     = (_debugCNonce != null) ? _debugCNonce : genNonce();
                 // FIXME: server realm may be multiple
-                res['digest-uri'] = _config.service + "/" + req['realm'];
+                res['realm']      = ("realm" in req) ? req['realm'] : _config.host;
+                // FIXME: server realm may be multiple
+                res['digest-uri'] = _config.service + "/" + res['realm'];
                 res['charset']    = 'utf-8';
                 res['nc']         = '00000001';
                 // FIXME: check server qop
