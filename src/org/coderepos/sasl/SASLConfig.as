@@ -20,7 +20,8 @@ package org.coderepos.sasl
         private var _service:String;
         private var _host:String;
 
-        public function SASLConfig(user:String="", pass:String="", auth:String=null, service:String=null, host:String=null)
+        public function SASLConfig(user:String="", pass:String="",
+            auth:String=null, service:String=null, host:String=null)
         {
             _user    = user;
             _pass    = pass;
